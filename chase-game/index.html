@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>my-app</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="applab/fontawesome-webfont.woff2" as="font">
+    <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    <script>
+        function setExportConfig(config) {
+            window.EXPORT_OPTIONS = config;
+        }
+    </script>
+    <script src="https://studio.code.org/projects/applab/jJc--yGAR5LlsuZu_AuOOSvHWpT5PUMREKf0S3NudaI/export_config?script_call=setExportConfig"></script>
+    <script src="applab/applab-api.js"></script>
+    <script src="https://www.google.com/jsapi"></script>
+    <link rel="stylesheet" href="applab/applab.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="divApplab" class="appModern running" tabindex="1" style="width: 320px; height: 450px; display: block;">
+        <div class="screen" tabindex="1" id="welcome_screen"
+            style="height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); background-size: 320px 450px; background-image: url(&quot;https://studio.code.org/blockly/media/1x1.gif&quot;);"
+            data-theme="classic" data-canonical-image-url="">
+            <img style="height: 450px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 0px; margin: 0px; object-fit: cover; font-family: &quot;object-fit: cover;&quot;;"
+                src="https://studio.code.org/media?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FcyZh6_C4k54%2Fmaxresdefault.jpg" data-canonical-image-url="https://i.ytimg.com/vi/cyZh6_C4k54/maxresdefault.jpg" data-object-fit="cover"
+                id="welcome_background"><button id="start_button"
+                style="padding: 0px; margin: 0px; height: 55px; width: 170px; font-size: 30px; color: rgb(255, 255, 255); position: absolute; left: 75px; top: 380px; background-color: rgb(236, 58, 58); border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 10px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;">GO!</button>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 50px; overflow: hidden; overflow-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 300px; height: 100px; position: absolute; left: 10px; top: 20px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: center;"
+                id="title">INTRUDER ALERT!</label>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 25px; overflow: hidden; overflow-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 250px; height: 130px; position: absolute; left: 35px; top: 160px; text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Tahoma, Geneva, sans-serif; text-align: center; background-color: rgb(34, 34, 34);"
+                id="instructions">A RED SPY IS IN THE BASE! Catch him by clicking&nbsp;before he makes off with your INTELLIGENCE!</label>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 26px; overflow: hidden; overflow-wrap: break-word; color: rgb(255, 255, 255); max-width: 320px; width: 110px; height: 33px; position: absolute; left: 110px; top: 340px; text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: center; background-color: rgba(0, 0, 0, 0);"
+                id="ready">Ready?</label></div>
+        <div class="screen" tabindex="1" id="game_screen" style="height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); display: none;" data-theme="classic">
+            <img src="https://studio.code.org/media?u=https%3A%2F%2Ft7.rbxcdn.com%2F1cff4bd2ad608d194246908b4810485f" id="game_background"
+                style="height: 450px; width: 320px; position: absolute; left: 0px; top: 38px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; object-fit: cover; font-family: &quot;object-fit: cover;&quot;;"
+                data-canonical-image-url="https://t7.rbxcdn.com/1cff4bd2ad608d194246908b4810485f" data-object-fit="cover">
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 18px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 68px; height: 23px; position: absolute; left: 5px; top: 7px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;"
+                id="score_description">Score:</label>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 22px; overflow: hidden; overflow-wrap: break-word; color: rgb(26, 110, 224); max-width: 320px; width: 36px; height: 28px; position: absolute; left: 80px; top: 5px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;"
+                id="total_score">0</label>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 18px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 63px; height: 23px; position: absolute; left: 215px; top: 7px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;"
+                id="lives_description">Lives:</label>
+            <label
+                style="margin: 0px; padding: 2px; line-height: 1; font-size: 22px; overflow: hidden; overflow-wrap: break-word; color: rgb(232, 43, 43); max-width: 320px; width: 31px; height: 28px; position: absolute; left: 285px; top: 5px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif;"
+                id="number_lives">3</label><img src="assets/red_spoi_by_vulre-d8qgygi.png" id="spy"
+                style="height: 75px; width: 75px; position: absolute; left: 205px; top: 325px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 40px;"
+                data-canonical-image-url="assets/red_spoi_by_vulre-d8qgygi.png">
+
+        </div>
+        <div class="screen" tabindex="1" id="win_screen" style="height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); display: none;" data-theme="classic">
+            <img style="height: 401px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 0px; margin: 0px; object-fit: cover; font-family: &quot;object-fit: cover;&quot;;"
+                src="https://studio.code.org/media?u=http%3A%2F%2Fgetwallpapers.com%2Fwallpaper%2Ffull%2Fc%2F0%2F5%2F610073.jpg" data-canonical-image-url="http://getwallpapers.com/wallpaper/full/c/0/5/610073.jpg" data-object-fit="cover"
+                id="win_background"><label
+                style="margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 320px; height: 40px; position: absolute; left: 0px; top: 10px; background-color: rgb(255, 255, 255); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: center; font-size: 36px;"
+                id="win_title">VICTORY!</label>
+            <button id="win_button"
+                style="padding: 0px; margin: 0px; width: 320px; color: rgb(255, 255, 255); position: absolute; left: 0px; top: 400px; background-color: rgb(68, 89, 234); border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 23px; height: 50px;">Play
+                again?</button>
+            <label
+                style="margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); font-family: Tahoma, Geneva, sans-serif; padding: 2px; width: 175px; height: 140px; position: absolute; top: 130px; font-size: 24px; text-align: center; border-width: 3px; border-radius: 10px; left: 7px;"
+                id="win_text">The spy is captured and the day is saved! Excellent work!</label></div>
+        <div class="screen" tabindex="1" id="lose_screen" style="height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); display: none;" data-theme="classic">
+
+
+            <img style="width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 0px; margin: 0px; height: 401px; object-fit: cover; font-family: &quot;object-fit: cover;&quot;;"
+                src="https://studio.code.org/media?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FDfOTUY3kaIU%2Fmaxresdefault.jpg" data-canonical-image-url="https://i.ytimg.com/vi/DfOTUY3kaIU/maxresdefault.jpg" data-object-fit="cover"
+                id="lose_background"><button id="lose_button"
+                style="padding: 0px; margin: 0px; width: 320px; color: rgb(255, 255, 255); position: absolute; left: 0px; top: 400px; background-color: rgb(68, 89, 234); border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 23px; height: 50px;"
+                data-mod-backgroundcolor="1" data-mod-fontfamily="1" data-mod-fontsize="1">Play again?</button><label
+                style="margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 320px; position: absolute; left: 0px; top: 10px; background-color: rgb(255, 255, 255); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; text-align: center; font-size: 36px; height: 42px;"
+                id="lose_title" data-mod-textcolor="1" data-mod-backgroundcolor="1" data-mod-bordercolor="1" data-mod-fontfamily="1" data-mod-fontsize="1">YOU FAILED!</label><label
+                style="margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255); border-color: rgb(0, 0, 0); font-family: Tahoma, Geneva, sans-serif; padding: 2px; width: 300px; position: absolute; top: 65px; font-size: 24px; text-align: center; border-width: 3px; border-radius: 10px; left: 10px; height: 40px;"
+                id="lose_text" data-mod-textcolor="1" data-mod-backgroundcolor="1" data-mod-bordercolor="1" data-mod-borderradius="1" data-mod-borderwidth="1" data-mod-fontfamily="1" data-mod-fontsize="1">The spy has escaped!!</label></div>
+    </div>
+</body>
+
+</html>
